@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Intro. | Fluxus Study</title><meta name="description" content="첫 모임용."><meta name="author" content="Jongmin Kim"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="generator" content="DocPad v6.64.3" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/dependencies/reveal.js/css/reveal.min.css"><link id="theme" rel="stylesheet" href="/dependencies/reveal.js/css/theme/default.css"><!-- For syntax highlighting--><link rel="stylesheet" href="/dependencies/reveal.js/lib/css/zenburn.css"><!-- If the query includes 'print-pdf', include the PDF print sheet--><script>if( window.location.search.match( /print-pdf/gi ) ) {
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = '/dependencies/reveal.js/css/print/pdf.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+}</script><!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><!-- Any section element inside of this container is displayed as a slide--><div class="slides"><section>
+  <h1>Intro</h1>
+  <h3>MEAN Stack을 파보자!</h3>
+  <p>
+    <small>Created by <a href="http://kimjmin.net">김종민</a> / <a href="http://twitter.com/kimjmin">@kimjmin</a></small>
+  </p>
+</section>
+
+<section>
+  <h2>MEANStack?</h2>
+  <div style="background:#eee">
+    <img width="170" src="http://mean.io/img/logos/mongodb.png"/>
+    <img width="170" src="http://mean.io/img/logos/express.png"/>
+    <img width="170" src="http://mean.io/img/logos/angularjs.png"/>
+    <img width="170" src="http://mean.io/img/logos/nodejs.png"/>
+  </div>
+  <ul>
+    <li>MEANStack 홈페이지 : <a target="_new" href="http://mean.io">http://mean.io</a></li>
+    <li>허광남님 강좌 : <a target="_new" href="http://youtu.be/imO5S9fbQXk">http://youtu.be/imO5S9fbQXk</a></li>
+    <li>윤영식님 블로그 : <a target="_new" href="http://mobicon.tistory.com/335">http://mobicon.tistory.com/335</a></li>
+  </ul>
+</section>
+
+<section>
+  <h3>현재 국내 SI들</h3>
+  <p>Java, JSP, Oracle, Weblogic, Spring, Ant, Maven, Hudson(Jenkins)</p>
+  <p>사용 언어 : Java, HTML, Javascript, SQL...</p>
+  <br/>
+  <h3>MEAN Stack</h3>
+  <p>NodeJS, MongoDB, AngularJS, Yoman, grunt...</p>
+  <p>사용 언어 : Javacript, JSON</p>
+</section>
+
+<section>
+  <h3>MEANStack 사용중인 서비스.</h3>
+  <img src="http://cfile10.uf.tistory.com/image/2121E24E528FFAA311FE37"/>
+</section>
+
+<section>
+  <h3>자바스크립트 기술</h3>
+  <img width="720" src="/presentations/img/javascript_pack.png">
+</section>
+
+<section>
+  <h2>NodeJS</h2>
+  <pre><code data-trim contenteditable>
+var http = require("http");
+
+http.createServer(function(request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.write("Hello World");
+  response.end();
+}).listen(8888);
+  </code></pre>
+</section>
+
+<section>  <!-- 자바스크립트 섹션 시작 -->
+
+<section>
+  <h2>Javascript</h2>
+  나는 자바스크립트에 대해 얼마나 알고 있는가?
+</section>
+
+<section>
+  자바스크립트에서는 전부 다 객체. 함수도 객체.
+<pre><code data-trim contenteditable>
+function getAdd(a, b){
+  return a+b;
+}
+
+var addVal = getAdd(1,2);
+console.log(addVal);
+</code></pre>
+<pre><code data-trim contenteditable>
+var getAdd = function(a, b){
+  return a+b;
+}
+
+var addVal = getAdd(1,2);
+console.log(addVal);
+</code></pre>
+  이런 식으로 함수를 객체로 만들어서 인자로 던지는것도 가능.
+</section>
+
+<section>
+  <h2>javascript 자료형</h2>
+  <p>
+    선언은 전부 var
+  </p>
+  <ol>
+    <li>number (숫자)	→ var test2 = 100 ;</li>
+    <li>string  (문자열)	→ var test3 = “hahaha” ;</li>
+    <li>boolean		→ var test4 = true ;</li>
+    <li>object (객체)	→ var test6 = { };</li>
+    <li>function (함수)	→ var test5 = function(){ }; //(람다함수)</li>
+    <li>undefined 		→ var test1 ; 값을 명시하지 않은 / 존재하지 않는 변수. null 이랑은 다름.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>비교문</h2>
+  <p>
+    == / !=
+  </p>
+  <p>
+    === / !==
+  </p>
+<pre><code data-trim contenteditable>
+var a = 100;
+var b = '100';
+console.log("a == b : " + (a == b));
+console.log("a === b : " + (a === b));
+</code></pre>
+</section>
+
+<section>
+  <h2>리터럴 함수 : new 함수()</h2>
+  <p>
+    new Number(), new String(), new Boolean();
+  </p>
+  <p>형식 가져오는 기능 : typeof()</p>
+<pre><code data-trim contenteditable>
+var a = true;
+var b = new Boolean(true);
+
+console.log("a : " + typeof(a));
+console.log("b : " + typeof(b));
+
+console.log("a == b : " + (a == b));
+console.log("a === b : " + (a === b));
+</code></pre>
+</section>
+
+<section>
+  <h2>JS 객체형</h2>
+  <ol>
+    <li>Object()</li>
+    <li>Array()</li>
+    <li>Function()</li>
+    <li>Date()</li>
+    <li>Math.PI</li>
+  </ol>
+<pre><code data-trim contenteditable>
+var obj = {key:val, key:val};
+var arr = [val, val, val];
+var func = function(){};
+var date = new Date();
+</code></pre>
+  <p>
+    Math 는 JS가 자체적으로 제공하는 오브젝트 같은거. 이런식으로 라이브러리 사용할 때 마다 제공하는 기능들이 생김.
+  </p>
+  <p>
+    예) 센차 터치의 : Ext 등.
+    <a target="_new" href="http://efreen.kimjmin.net/">http://efreen.kimjmin.net/</a>
+  </p>
+</section>
+
+<section>
+  <h2>Object - 객체형.</h2>
+<pre><code data-trim contenteditable>
+var me = {
+  name : 'Jongmin',
+  age : 34,
+  game : ['PS3', 'XBox360'],
+  wife : {name : 'Areum', age : 28},
+  married : true,
+  getName : function(){return "My name is "+this.name}
+};
+
+console.log(me.name);
+console.log(me['age']);
+console.log(me.game[0]);
+console.log(me.wife);
+console.log(me.getName());
+</code></pre>
+</section>
+
+<section>
+  <h2>Object - 객체형.</h2>
+<pre><code data-trim contenteditable>
+var me = {
+  name : 'Jongmin'
+};
+me.age = 34;
+me['job'] = 'programmer';
+
+console.log(me.age);
+console.log(me.job);
+</code></pre>
+</section>
+
+<section>
+  <h2>Array - 배열형.</h2>
+<pre><code data-trim contenteditable>
+var arrs = ['name',100,{name : 'kim'}];
+console.log(arrs[0]);
+console.log(arrs[2].name);
+</code></pre>
+  <p>
+    배열 내부 값은 아무 형이나 올 수 있음.
+  </p>
+</section>
+
+<section>
+  <h2>Array - 배열형.</h2>
+<pre><code data-trim contenteditable>
+var arrA = new Array(10);
+var arrB = new Array(1,2,3);
+
+console.log(arrA.length, arrA[0]);
+console.log(arrB.length, arrB[0]);
+</code></pre>
+  <p>
+    아무 형이나 올 수 있음.
+  </p>
+</section>
+
+<section>
+  <h2>Function - 함수형.</h2>
+  <p>
+    함수 선언하는 3가지 방법.
+  </p>
+<pre><code data-trim contenteditable>
+function addA(a, b){
+  return a+b;
+}
+
+var addB = function(a, b){
+  return a+b;
+}
+
+var addC = new Function('a','b','return a+b');
+
+console.log(addA(1,2), addB(2,3), addC(3,4));
+</code></pre>
+</section>
+
+<section>
+  <h2>Function - 함수형.</h2>
+  <p>
+    arguments - 인자 배열.
+  </p>
+<pre><code data-trim contenteditable>
+function add(){
+  return arguments[0] + arguments[1];
+}
+
+console.log(add(2,3));
+</code></pre>
+<p>
+  arguments.length : 실제 넘겨준 인자 갯수.
+</p>
+<pre><code data-trim contenteditable>
+function args(a,b){
+  return arguments.length;
+}
+
+console.log(args());
+console.log(args('a','b','c','d'));
+</code></pre>
+</section>
+
+</section> <!-- 자바스크립트 섹션 끝 -->
+
+<section>
+  <section>
+    <h2>목표</h2>
+    <p>
+      재능 연결 서비스.
+    </p>
+    <p>
+      오투잡 : <a target="_new" href="http://otwojob.com/">http://otwojob.com/</a>
+    </p>
+  </section>
+
+<section>
+  <h2>다음주 과제</h2>
+  <ol>
+    <li>클라우드 서버 생성.</li>
+    <li>NodeJS 설치.</li>
+    <li><a target="_new" href='http://www.nodebeginner.org/index-kr.html'>http://www.nodebeginner.org/index-kr.html</a> 따라하기.</li>
+    <li>스터디 내용 <a target="_new" href="https://github.com/fluxus-study/documents">https://github.com/fluxus-study/documents</a> 마크다운으로 올리기.</li>
+    <li>발표자료 만들어 fluxus-study.github.io 에 올리기. -> <a target="_new" href="https://github.com/fluxus-study/fluxus-study.github.io.source">참고</a> </li>
+  </ol>
+</section>
+
+</section></div></div><script src="/dependencies/reveal.js/lib/js/head.min.js"></script><script src="/dependencies/reveal.js/js/reveal.min.js"></script><script>// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+  theme: 'default', // default|beige|blood|moon|night|serif|simple|sky|solarized
+  transition: 'default', // default|cube|page|concave|zoom|linear|fade|none
+  // Parallax scrolling
+  // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+  // parallaxBackgroundSize: '2100px 900px',
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: '/dependencies/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: '/dependencies/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/dependencies/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/dependencies/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: '/dependencies/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: '/dependencies/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});
+</script><script>Reveal.addEventListener('ready', function(event) {
+  ga('send', 'pageview', {
+    'page': '/presentations/2014-06-09-javascript/?h=' + event.indexh + '&v=' + event.indexv,
+    'title': 'Intro.'
+  });
+});
+Reveal.addEventListener('slidechanged', function(event) {
+  ga('send', 'pageview', {
+    'page': '/presentations/2014-06-09-javascript/?h=' + event.indexh + '&v=' + event.indexv,
+    'title': 'Intro.'
+  });
+});
+</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-51709817-1', 'auto');
+ga('require', 'displayfeatures');</script></body></html>

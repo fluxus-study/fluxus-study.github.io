@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Fluxus Study</title>
+  <link href="http://fluxus-study.github.io/atom.xml" rel="self"/>
+  <link href="http://fluxus-study.github.io"/>
+  <updated>2014-06-16T04:37:25.035Z</updated>
+  <id>http://fluxus-study.github.io</id>
+  <author>
+    <name>Jongmin Kim</name>
+    <email>kimjmin@gmail.com</email>
+  </author>
+
+  
+</feed>
